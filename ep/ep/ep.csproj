@@ -133,12 +133,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="css\" />
+    <Folder Include="js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="calendar.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Leave.css" />
+    <Content Include="Content\ResponsiveGrid.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -152,7 +157,10 @@
     <Content Include="images\favicon.png" />
     <Content Include="images\ios-desktop.png" />
     <Content Include="images\user.jpg" />
+    <Content Include="Scripts\applyLeave.js" />
+    <Content Include="Scripts\calendar.js" />
     <Content Include="styles.css" />
+    <Content Include="ViewLeave.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
     <None Include="Properties\Settings.settings">
@@ -255,6 +263,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLeave.aspx.cs">
+      <DependentUpon>ViewLeave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewLeave.aspx.designer.cs">
+      <DependentUpon>ViewLeave.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
