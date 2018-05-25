@@ -1,13 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Admin.WebForm1" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="ep.WebForm2" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="abc" runat="server">
+<form id="form1" runat="server">
         <br />
         <asp:Label ID="Label13" runat="server" Text="Label" Visible="False"></asp:Label>
         <br />
@@ -112,5 +105,5 @@
         <br />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
     </form>
-</body>
-</html>
+
+</asp:Content>
