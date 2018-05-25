@@ -133,17 +133,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="css\" />
-    <Folder Include="js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="calendar.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Leave.css" />
-    <Content Include="Content\ResponsiveGrid.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -157,12 +152,9 @@
     <Content Include="images\favicon.png" />
     <Content Include="images\ios-desktop.png" />
     <Content Include="images\user.jpg" />
-    <Content Include="Scripts\applyLeave.js" />
-    <Content Include="Scripts\calendar.js" />
     <Content Include="styles.css" />
-    <Content Include="ViewLeave.aspx" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
+    <Content Include="Employee_Registration.aspx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -264,13 +256,6 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="ViewLeave.aspx.cs">
-      <DependentUpon>ViewLeave.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewLeave.aspx.designer.cs">
-      <DependentUpon>ViewLeave.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -285,12 +270,12 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="Employee_Registration.aspx.cs">
+      <DependentUpon>Employee_Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="Employee_Registration.aspx.designer.cs">
+      <DependentUpon>Employee_Registration.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

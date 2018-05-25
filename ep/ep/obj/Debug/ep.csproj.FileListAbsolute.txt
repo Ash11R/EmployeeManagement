@@ -94,3 +94,6 @@ C:\Users\ash\Documents\GitHub\EmployeeManagement\ep\ep\bin\Microsoft.AspNet.Frie
 C:\Users\ash\Documents\GitHub\EmployeeManagement\ep\ep\obj\Debug\ep.csprojResolveAssemblyReference.cache
 C:\Users\ash\Documents\GitHub\EmployeeManagement\ep\ep\obj\Debug\ep.dll
 C:\Users\ash\Documents\GitHub\EmployeeManagement\ep\ep\obj\Debug\ep.pdb
+C:\Users\Vasu\Documents\GitHub\EmployeeManagement\ep\ep\obj\Debug\ep.csprojResolveAssemblyReference.cache
+C:\Users\Vasu\Documents\GitHub\EmployeeManagement\ep\ep\obj\Debug\ep.dll
+C:\Users\Vasu\Documents\GitHub\EmployeeManagement\ep\ep\obj\Debug\ep.pdb
