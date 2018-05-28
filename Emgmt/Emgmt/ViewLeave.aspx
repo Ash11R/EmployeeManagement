@@ -1,10 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewLeave.aspx.cs" Inherits="Emgmt.ViewLeave" %>
 
 <!DOCTYPE html>
+<script runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>View Leave</title>
+    protected void GridView1_SelectedIndexChanged(objeView Leave</title>
 
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -29,7 +28,7 @@
         <div class="w3-container col-md-12 align-items-center p-4">
             
             <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="false" AllowPaging="true" 
-                 OnPageIndexChanging="OnPaging" PageSize="6" CssClass="table table-striped table-bordered table-hover">
+                 OnPageIndexChanging="OnPaging" PageSize="6" CssClass="table table-striped table-bordered table-hover" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField ItemStyle-Width="150px" DataField="username" HeaderText="Employee Username " />
                     <asp:BoundField ItemStyle-Width="150px" DataField="Purpose" HeaderText="Purpose" />

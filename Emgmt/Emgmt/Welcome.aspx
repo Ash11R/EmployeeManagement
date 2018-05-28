@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Welcome.aspx.cs" Inherits="Emgmt.Welcome" %>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Welcome.aspx.cs" Inherits="Emgmt.Welcome" %>--%>
 
 <!DOCTYPE html>
 

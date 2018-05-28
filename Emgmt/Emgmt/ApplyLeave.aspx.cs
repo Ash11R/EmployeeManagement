@@ -19,8 +19,6 @@ namespace Emgmt
         {
             if(Session["Username"]!=null)
                 username = Session["UserName"].ToString();
-
-
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -39,7 +37,6 @@ namespace Emgmt
 
 
                   con.Close();
-
 
 
         }
