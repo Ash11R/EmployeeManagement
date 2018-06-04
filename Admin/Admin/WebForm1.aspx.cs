@@ -10,8 +10,9 @@ namespace Admin
     public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
+       
+            {
+                
         }
 
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -67,6 +68,31 @@ namespace Admin
                     {
                 Response.Write ("Please enter the correct details");
             }
+
+            //if (RequiredFieldValidator1.IsValid)
+            //{
+            //    TextBox1.BackColor= System.Drawing.Color.Green;
+            //}
+            //else
+            //{
+            //    TextBox1.BackColor = System.Drawing.Color.Red;
+            //}
+
+            /*TextBox1.BackColor = System.Drawing.Color.Green;*/
+
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            DropDownList1.Text = "";
+            TextBox11.Text = "";
+            TextBox12.Text = "";
+            DropDownList2.Text = "";
+            TextBox6.Text = "";
+            CheckBox1.Text = "";
+            TextBox7.Text = "";
+            TextBox8.Text = "";
+            TextBox9.Text = "";
+            TextBox10.Text = "";
+            DropDownList3.Text = "";
         }
     }
-}
+    }
