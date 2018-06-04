@@ -7,9 +7,8 @@ using System.Web.UI.WebControls;
 
 namespace ep
 {
-    public partial class SiteMaster : MasterPage
+    public partial class adminatt : System.Web.UI.Page
     {
-        
         protected void Page_Load(object sender, EventArgs e)
         {
 

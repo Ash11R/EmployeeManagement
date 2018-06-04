@@ -4,13 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Configuration;
 
-
-namespace Emgmt
+namespace ep
 {
     public partial class ViewLeave : System.Web.UI.Page
     {
@@ -20,9 +18,10 @@ namespace Emgmt
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            
+            if (Session["Username"] == null)
+                Response.Redirect("LoginWebForm.aspx");
 
-            connetionString = @"Data Source=.;Initial Catalog=E_MGMT;Integrated Security=True";
+            connetionString = @"Data Source=.;Initial Catalog=sample2;Integrated Security=True";
 
             conn = new SqlConnection(connetionString);
 
@@ -35,16 +34,17 @@ namespace Emgmt
                 ViewState["dt"] = dt;
                 this.BindGrid();
             }
+            
 
         }
 
-
+         
         private void BindGrid()
         {
-            string constr = "Data Source=.;Initial Catalog=E_MGMT;Integrated Security=True";
+            string constr = "Data Source=.;Initial Catalog=sample2;Integrated Security=True";
             using (SqlConnection con = new SqlConnection(constr))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT username, Purpose, StartDate, EndDate FROM LeaveRequests where StatusNotif='Unread'"))
+                using (SqlCommand cmd = new SqlCommand("SELECT username, Purpose, StartDate, EndDate FROM LeaveRequests where StatusNotif='Unread' "))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter())
                     {
@@ -56,11 +56,12 @@ namespace Emgmt
                             sda.Fill(dt);
                             GridView1.DataSource = ViewState["dt"] as DataTable;// dt;
                             GridView1.DataBind();
+                            
                         }
                     }
                 }
             }
-    }
+        }
 
         protected void OnPaging(object sender, GridViewPageEventArgs e)
         {
@@ -77,21 +78,21 @@ namespace Emgmt
             //Reference the GridView Row.
             GridViewRow row = GridView1.Rows[rowIndex];
 
-            
+
             string username = row.Cells[0].Text;
             string purpose = row.Cells[1].Text;
 
             if (e.CommandName == "Accept")
             {
-              
+
 
                 //conn.Open();
-               
-                SqlCommand cmd = new SqlCommand("update LeaveRequests Set StatusNotif = @notif where username = @username and Purpose=@purpose", conn);  
-                cmd.Parameters.AddWithValue("@notif","Accept");
+
+                SqlCommand cmd = new SqlCommand("update LeaveRequests Set StatusNotif = @notif where username = @username and Purpose=@purpose", conn);
+                cmd.Parameters.AddWithValue("@notif", "Accept");
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@purpose", purpose);
-                
+
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
 
@@ -99,10 +100,10 @@ namespace Emgmt
                 //Response.Write(rowIndex.ToString());
 
                 BindGrid();
-            
+
             }
 
-            if(e.CommandName == "Decline")
+            if (e.CommandName == "Decline")
             {
 
                 //conn.Open();
