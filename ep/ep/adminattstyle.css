@@ -1,0 +1,25 @@
+﻿body {
+    background-color:aquamarine;
+}
+.content
+{
+    margin:auto;
+    width:600px;
+    border:solid 1px black;
+    background-color:white;
+    padding:10px;
+    margin-left:300px;
+
+}
+label{
+    font-weight:bold;
+}
+input{
+    
+    border:double 3px orange;
+
+}
+.button{
+    background-color:aqua;
+}
+

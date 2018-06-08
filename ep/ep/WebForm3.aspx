@@ -1,21 +1,19 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="ep.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebForm3.aspx.cs" Inherits="ep.WebForm3" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="abc" runat="server">
+        <link href="adminattstyle.css" rel="stylesheet" />
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link href="adminattstyle.css" rel="stylesheet" />
-
-        <title></title>
+  
         <style type="text/css">
             .auto-style1 {
                 margin-left: 280px;
             }
         </style>
-</head>
-<body>
+
     <form id="form1" runat="server">
         <div class="auto-style1">
+
+            <br />
+            <br />
 
             <asp:Label ID="Label1" runat="server" Text="View Attendance" Font-Names="Copperplate Gothic Bold" Font-Size="XX-Large"></asp:Label>
             <br />
@@ -51,5 +49,4 @@
 
         
     </form>
-</body>
-</html>
+</asp:Content>

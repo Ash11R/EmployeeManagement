@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.IO;
+
 
 
 namespace ep
@@ -14,8 +16,8 @@ namespace ep
     
     public partial class Employee_registration : System.Web.UI.Page
     {
-        int c = -1;
-        int d = 0;
+        int c = 0;
+      
             
         protected void Page_Load(object sender, EventArgs e)
 
@@ -82,6 +84,19 @@ namespace ep
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            HttpPostedFile pf = FileUpload1.PostedFile;
+            string f_nm = Path.GetFileName(pf.FileName);
+            string fex = Path.GetExtension(f_nm);
+
+            if (fex.ToLower() == ".jpg" || fex.ToLower() == ".bmp" || fex.ToLower() == ".png" || fex.ToLower() == ".gif")
+            {
+                Session["Photo"] = "Uploads/" + f_nm;
+                FileUpload1.SaveAs(Server.MapPath("~/Uploads/" + FileUpload1.FileName));
+            }
+            else
+            {
+                Response.Write("Please Upload Photo of appropriate type");
+            }
 
             string us = (string)Session["username"];
             string cs = "data source = .; database= sample2; integrated security =true;";
@@ -101,11 +116,9 @@ namespace ep
                 cmd.Parameters.AddWithValue("@email", TextBox9.Text);
                 cmd.Parameters.AddWithValue("@Salary", TextBox10.Text);
                 cmd.Parameters.AddWithValue("@Off_tm", DropDownList3.SelectedValue);
-                cmd.Parameters.AddWithValue("@Emp_ID", ViewState["c"].ToString());
-                cmd.Parameters.AddWithValue("@User_name", TextBox13.Text);
-                
-
-
+               // cmd.Parameters.AddWithValue("@Emp_ID", ViewState["c"].ToString());
+                cmd.Parameters.AddWithValue("@username", TextBox13.Text);
+                cmd.Parameters.AddWithValue("@Photo", (String)Session["Photo"]);
                 cn.Open();
                 cmd.ExecuteReader();
 
@@ -119,16 +132,16 @@ namespace ep
                 
             }
                 Response.Write(ViewState["c"].ToString());
-            Label13.Visible = true;
+            
             if (Page.IsValid)
             {
-                Label13.Text = "Your data has been saved";
+                Response.Write("Your data has been saved");
             }
             else
             {
                 Response.Write("Please enter the correct details");
             }
-           
+
 
             //if (RequiredFieldValidator1.IsValid)
             //{
@@ -140,8 +153,24 @@ namespace ep
             //}
 
             /*TextBox1.BackColor = System.Drawing.Color.Green;*/
+          
 
 
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            DropDownList1.Text = "";
+            TextBox11.Text = "";
+            TextBox12.Text = "";
+            DropDownList2.Text = "";
+            TextBox6.Text = "";
+            CheckBox1.Text = "";
+            TextBox7.Text = "";
+            TextBox8.Text = "";
+            TextBox9.Text = "";
+            TextBox10.Text = "";
+            DropDownList3.Text = "";
         }
+
+        
     }
 }

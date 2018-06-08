@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about_us_css.css" />
+    <Content Include="adminattstyle.css" />
     <Content Include="calendar.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -155,6 +156,7 @@
     </Content>
     <Content Include="images\android-desktop.png" />
     <Content Include="images\dog.png" />
+    <Content Include="images\emp.JPG" />
     <Content Include="images\favicon.png" />
     <Content Include="images\ios-desktop.png" />
     <Content Include="images\user.jpg" />
@@ -164,6 +166,8 @@
     <Content Include="styles.css" />
     <Content Include="StyleSheet1.css" />
     <Content Include="StyleSheet1_webform.css" />
+    <Content Include="Uploads\9146.jpg" />
+    <Content Include="Uploads\My pic.jpg" />
     <Content Include="ViewLeave.aspx" />
     <Content Include="Employee_registration.aspx" />
     <Content Include="ApplyLeave.aspx" />
@@ -171,6 +175,11 @@
     <Content Include="LeaveStatus.aspx" />
     <Content Include="About.aspx" />
     <Content Include="EmployeeAttendance.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
+    <Content Include="WebForm4.aspx" />
+    <Content Include="WebForm5.aspx" />
     <Content Include="Welcome.aspx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -328,6 +337,41 @@
     </Compile>
     <Compile Include="EmployeeAttendance.aspx.designer.cs">
       <DependentUpon>EmployeeAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm5.aspx.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm5.aspx.designer.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
     </Compile>
     <Compile Include="Welcome.aspx.cs">
       <DependentUpon>Welcome.aspx</DependentUpon>

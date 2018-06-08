@@ -92,9 +92,9 @@
         </header>
         <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
             <header class="demo-drawer-header">
-                <img src="images/user.jpg" class="demo-avatar" />
+                <asp:Image ID="Image1"  runat="server" Height="70px" Width="90px"  />  
                 <div class="demo-avatar-dropdown">
-                    <span>hello@example.com</span>
+                    <span>hello@<asp:Label ID="Label1" runat="server" ></asp:Label></span>
                     <div class="mdl-layout-spacer"></div>
                     <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                         <i class="material-icons" role="presentation">arrow_drop_down</i>
@@ -110,13 +110,13 @@
             <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
                 <a class="mdl-navigation__link" ><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
                 <a class="mdl-navigation__link" href="Employee_registration.aspx"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Employee Registration</a>
-                <a class="mdl-navigation__link" href="Attendance.aspx"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Attendance</a>
+                <a class="mdl-navigation__link" href="WebForm3.aspx"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Admin Attendance</a>
                 <a class="mdl-navigation__link" href="ApplyLeave.aspx"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Apply Leave</a>
                 <a class="mdl-navigation__link" href="ViewLeave.aspx"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>View Leave</a>
-                <a class="mdl-navigation__link"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
+                <a class="mdl-navigation__link" href="WebForm5.aspx"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Employee Details</a>
                 <a class="mdl-navigation__link" href="LeaveStatus.aspx"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Leave status</a>
                 <a class="mdl-navigation__link" href="EmployeeAttendance.aspx"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Attendace Employee</a>
-                <a class="mdl-navigation__link"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a>
+                <a class="mdl-navigation__link" href="WebForm2.aspx"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Salary</a>
                 <div class="mdl-layout-spacer"></div>
                 <a  onclick="f()" class="mdl-navigation__link"  href="LoginWebForm.aspx"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Logout</span>Logout</a>
               <script> 
@@ -124,16 +124,16 @@
                   {
                       alert("You have been log out sucessfully!");
                   }
-                  ses
+                  
               </script>
             </nav>
 
         </div>
-        <main class="mdl-layout__content mdl-color--grey-100">
+       
             <asp:ContentPlaceHolder ID="abc" runat="server">
 
             </asp:ContentPlaceHolder>
-        </main>
+        
     </div>
 
 

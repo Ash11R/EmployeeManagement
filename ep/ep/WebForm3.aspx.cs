@@ -8,14 +8,14 @@ using System.Data.SqlClient;
 
 namespace ep
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class WebForm3 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             string CS = "data source = .; database = sample2; integrated security = SSPI";
             using (SqlConnection con = new SqlConnection(CS))
             {
-                SqlCommand cmd = new SqlCommand("select * from Att where Emp_Name != 'NULL'",con);
+                SqlCommand cmd = new SqlCommand("select * from Att where Emp_Name != 'NULL'", con);
                 con.Open();
                 GridView1.DataSource = cmd.ExecuteReader();
                 GridView1.DataBind();
@@ -29,7 +29,7 @@ namespace ep
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
+
             string CS = "data source = .; database = sample2; integrated security = SSPI";
             using (SqlConnection con = new SqlConnection(CS))
             {

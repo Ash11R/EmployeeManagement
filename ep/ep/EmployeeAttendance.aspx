@@ -13,7 +13,7 @@
         <br />
         
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox3" runat="server" Visible="False"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" Visible="False" OnTextChanged="TextBox3_TextChanged"></asp:TextBox>
         <br />
         <asp:Label ID="Label2" runat="server" Text="Date:"></asp:Label>
             &nbsp;&nbsp;<asp:TextBox ID="TextBox1" runat="server" BorderStyle="Outset" ></asp:TextBox>

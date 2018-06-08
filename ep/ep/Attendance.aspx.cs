@@ -42,8 +42,7 @@ namespace ep
                 TextBox1.Text = d1.ToShortDateString();
                 string CS = "data source = .; database = sample2; integrated security = SSPI";
 
-
-
+                
 
                 using (SqlConnection con = new SqlConnection(CS))
                 {
